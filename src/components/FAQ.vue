@@ -3,12 +3,12 @@
     <div class="xl:pb-24 pb-12 sm:pt-0 pt-6">
       <div class="w-full">
         <ul>
-          <li class="faq py-6 border-gray-200 border-solid border-b">
+          <li class="faq1 py-6 border-gray-200 border-solid border-b">
             <div class="flex justify-between items-center cursor-pointer">
-              <p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200">
+              <p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" @click="clickmenu">
                 What is Renderpub?
               </p>
-              <div data-menu class="cursor-pointer">
+              <div data-menu class="cursor-pointer" @click="clickmenu">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   data-plus
@@ -57,12 +57,12 @@
               </ol>
             </div>
           </li>
-          <li class="faq py-6 border-gray-200 border-solid border-b">
+          <li class="faq1 py-6 border-gray-200 border-solid border-b">
             <div class="flex justify-between items-center cursor-pointer">
-              <p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200">
+              <p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" @click="clickmenu">
                 How do I get started?
               </p>
-              <div data-menu class="cursor-pointer">
+              <div data-menu class="cursor-pointer" @click="clickmenu">
                 <svg
                   data-plus
                   xmlns="http://www.w3.org/2000/svg"
@@ -106,12 +106,12 @@
               The best way to get started with the Renderpub Suite is by downloading the launcher which will be made available at beta launch time.
             </p>
           </li>
-          <li class="faq py-6 border-gray-200 border-solid border-b">
+          <li class="faq1 py-6 border-gray-200 border-solid border-b">
             <div class="flex justify-between items-center cursor-pointer">
-              <p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200">
+              <p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" @click="clickmenu">
                 How does Renderpub integrate with other software?
               </p>
-              <div data-menu class="cursor-pointer">
+              <div data-menu class="cursor-pointer" @click="clickmenu">
                 <svg
                   data-plus
                   xmlns="http://www.w3.org/2000/svg"
@@ -155,12 +155,12 @@
               Renderpub Studio can import 3D models created in any 3D modeling software when exported to fbx, obj, dae, gltf, 3ds and 3dm formats. In addition to importing, there are DirectLink Plugins for real time syncing of scenes between Renderpub Studio and 3D modeling applications like SketchUp, Archicad, Rhino, Revit, and 3ds Max. 
             </p>
           </li>
-          <li class="faq py-6 border-gray-200 border-solid border-b">
+          <li class="faq1 py-6 border-gray-200 border-solid border-b">
             <div class="flex justify-between items-center cursor-pointer">
-              <p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200">
+              <p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" @click="clickmenu">
                 What is the pricing model?
               </p>
-              <div data-menu class="cursor-pointer">
+              <div data-menu class="cursor-pointer" @click="clickmenu">
                 <svg
                   data-plus
                   xmlns="http://www.w3.org/2000/svg"
@@ -204,12 +204,12 @@
               All products in the Renderpub Suite are free for all purposes during the beta run. Definitive pricing will be made available before production release.  
             </p>
           </li>
-          <li class="faq py-6 border-gray-200 border-solid border-b">
+          <li class="faq1 py-6 border-gray-200 border-solid border-b">
             <div class="flex justify-between items-center cursor-pointer">
-              <p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200">
+              <p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" @click="clickmenu">
                 What are the minimum system requirements to run Renderpub Suite?
               </p>
-              <div data-menu class="cursor-pointer">
+              <div data-menu class="cursor-pointer" @click="clickmenu">
                 <svg
                   data-plus
                   xmlns="http://www.w3.org/2000/svg"
@@ -275,12 +275,12 @@
               </ul>
             </div>
           </li>
-          <li class="faq py-6 border-gray-200 border-solid border-b">
+          <li class="faq1 py-6 border-gray-200 border-solid border-b">
             <div class="flex justify-between items-center cursor-pointer">
-              <p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200">
+              <p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" @click="clickmenu">
                 Do I need a Head Mounted Display (HMD) to use Renderpub?
               </p>
-              <div data-menu class="cursor-pointer">
+              <div data-menu class="cursor-pointer" @click="clickmenu">
                 <svg
                   data-plus
                   xmlns="http://www.w3.org/2000/svg"
@@ -324,12 +324,12 @@
               While an HMD is not necessary, the interactive walkthroughs on Renderpub Spaces can be viewed immersively in VR using an HMD.
             </p>
           </li>
-          <li class="faq py-6 border-gray-200 border-solid border-b">
+          <li class="faq1 py-6 border-gray-200 border-solid border-b">
             <div class="flex justify-between items-center cursor-pointer">
-              <p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200">
+              <p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" @click="clickmenu">
                 Where can I find support?
               </p>
-              <div data-menu class="cursor-pointer">
+              <div data-menu class="cursor-pointer" @click="clickmenu">
                 <svg
                   data-plus
                   xmlns="http://www.w3.org/2000/svg"
@@ -370,15 +370,15 @@
               </div>
             </div>
             <p data-content id="noclick" class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200">
-              The best place to find community and support is the Renderpub <a id="noclick" href="https://discord.gg/KtYtxfzs" target="_blank" style="text-decoration: underline;">Discord Server.</a> Additionally, you can reach us at info@renderpub.com for correspondence.
+              The best place to find community and support is the <a id="noclick" href="https://discord.gg/tj6ynHUM" target="_blank" style="text-decoration: underline;">Renderpub Discord Server.</a> Additionally, you can reach us at info@renderpub.com for correspondence.
             </p>
           </li>
-          <li class="faq py-6 border-gray-200 border-solid border-b">
+          <li class="faq1 py-6 border-gray-200 border-solid border-b">
             <div class=" flex justify-between items-center cursor-pointer">
-              <p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200">
+              <p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" @click="clickmenu">
                 Where can I find learning resources?
               </p>
-              <div data-menu class="cursor-pointer">
+              <div data-menu class="cursor-pointer" @click="clickmenu">
                 <svg
                   data-plus
                   xmlns="http://www.w3.org/2000/svg"
@@ -429,38 +429,23 @@
 </template>
 
 <script lang=ts>
-import { Tags } from './WebviewerScripts/tags';
 export default {
-  name: 'GrayBgSimple',
-  mounted() {
-    this.registerClickEventListener()
-  },
   methods: {
-    registerClickEventListener() {
-      const faqs = document.getElementsByClassName('faq')
-      console.log(faqs.length);
-      for (let i = 0; i < faqs.length; i++) {
-        faqs[i].addEventListener('click', (e) => {
-          e.stopPropagation()
-          console.log(e.currentTarget.nodeName);
-          e.preventDefault()
-          if (e.target.id!='noclick') {
-          const target = e.currentTarget
-          const plusIcon = target.querySelector('[data-plus]')
-          const minusIcon = target.querySelector('[data-minus]')
-          const content = target.querySelector('[data-content]')
-          content.classList.toggle('hidden')
-          if (content.classList.contains('hidden')) {
-            plusIcon.style.display = 'block'
-            minusIcon.style.display = 'none'
-          }
-          else {
-            plusIcon.style.display = 'none'
-            minusIcon.style.display = 'block'
-          }
-          }
-        }, true)
-      }
+    clickmenu(e) {
+        const target = e.currentTarget.parentNode.parentNode
+        // console.log(target)
+        const plusIcon = target.querySelector('[data-plus]')
+        const minusIcon = target.querySelector('[data-minus]')
+        const content = target.querySelector('[data-content]')
+        content.classList.toggle('hidden')
+        if (content.classList.contains('hidden')) {
+        plusIcon.style.display = 'block'
+        minusIcon.style.display = 'none'
+        }
+        else {
+        plusIcon.style.display = 'none'
+        minusIcon.style.display = 'block'
+        }
     },
   },
 }

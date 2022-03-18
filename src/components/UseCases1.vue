@@ -7,7 +7,7 @@
                     <div class="w-20 h-20 relative mr-5">
                         <div class="absolute top-0 right-0 bg-[#e8ffff] rounded w-16 h-16 mt-2 mr-1"></div>
                         <div class="absolute text-gray-200 bottom-0 left-0 bg-our-blue rounded w-16 h-16 flex items-center justify-center mt-2 mr-3 p-3">
-                            <img src="../../public/icons/ICONS_5:3/Architectural2.svg" alt=""  >
+                            <img src="../../public/icons/Architectural2.svg" alt=""  >
                         </div>
                     </div>
                     <div class="w-10/12">
@@ -19,7 +19,7 @@
                     <div class="w-20 h-20 relative mr-5">
                         <div class="absolute top-0 right-0 bg-[#e8ffff] rounded w-16 h-16 mt-2 mr-1"></div>
                         <div class="absolute text-gray-200 bottom-0 left-0 bg-our-blue rounded w-16 h-16 flex items-center justify-center mt-2 mr-3 p-3">
-                            <img src="../../public/icons/ICONS_5:3/Real_estate2.svg" alt="">
+                            <img src="../../public/icons/Real_estate2.svg" alt="">
                         </div>
                     </div>
                     <div class="w-10/12">
@@ -32,7 +32,7 @@
                         <div class="absolute top-0 right-0 bg-[#e8ffff] rounded w-16 h-16 mt-2 mr-1"></div>
                         
                           <div class="absolute text-gray-200 bottom-0 left-0 bg-our-blue rounded w-16 h-16 flex items-center justify-center mt-2 mr-3 p-3">
-                            <img src="../../public/icons/ICONS_5:3/visualstores2.svg" alt="">
+                            <img src="../../public/icons/visualstores2.svg" alt="">
                         </div>
                         
                     </div>
@@ -46,7 +46,7 @@
                         <div class="absolute top-0 right-0 bg-[#e8ffff] rounded w-16 h-16 mt-2 mr-1"></div>
                         
                           <div class="absolute text-gray-200 bottom-0 left-0 bg-our-blue rounded w-16 h-16 flex items-center justify-center mt-2 mr-3 p-3">
-                            <img src="../../public/icons/ICONS_5:3/showcase_portfolios2.svg" alt="">
+                            <img src="../../public/icons/showcase_portfolios2.svg" alt="">
                         </div>
                         
                     </div>
@@ -60,7 +60,7 @@
                         <div class="absolute top-0 right-0 bg-[#e8ffff] rounded w-16 h-16 mt-2 mr-1"></div>
                         
                           <div class="absolute text-gray-200 bottom-0 left-0 bg-our-blue rounded w-16 h-16 flex items-center justify-center mt-2 mr-3 p-3">
-                            <img src="../../public/icons/ICONS_5:3/iterations2.svg" alt="">
+                            <img src="../../public/icons/iterations2.svg" alt="">
                         </div>
                         
                     </div>
@@ -74,7 +74,7 @@
                         <div class="absolute top-0 right-0 bg-[#e8ffff] rounded w-16 h-16 mt-2 mr-1"></div>
                         
                           <div class="absolute text-gray-200 bottom-0 left-0 bg-our-blue rounded w-16 h-16 flex items-center justify-center mt-2 mr-3 p-3">
-                            <img src="../../public/icons/ICONS_5:3/collaborate2.svg" alt="">
+                            <img src="../../public/icons/collaborate2.svg" alt="">
                         </div>
                         
                     </div>

@@ -43,8 +43,7 @@ const props = defineProps({
   <CTA2 />
 
   <SectionHeading id="FAQ" section-title="Frequently Asked Questions" description="" />
-  <!-- <FAQ /> -->
-  <Faq1 />
+  <FAQ />
 </template>
 
 <route lang="yaml">
