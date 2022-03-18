@@ -61,6 +61,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if (setting === 'dark' || (prefersDark && setting !== 'light'))
         document.documentElement.classList.toggle('dark', true)
     })()
+
+    window.onbeforeunload = () => {  
+  window.scrollTo(0, 0);  
+};
+
   </script>
   <script type="module" src="/src/main.ts"></script>
 </body>
