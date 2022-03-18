@@ -205,9 +205,9 @@ const viteSSR$1 = function viteSSR(options, hook) {
   <script src = "https://cdn.jsdelivr.net/npm/three@0.136.0/examples/js/loaders/GLTFLoader.js">  <\/script> -->
 
 
-  <script type="module" crossorigin src="/assets/index.96818c55.js"><\/script>
+  <script type="module" crossorigin src="/assets/index.1639bd7d.js"><\/script>
   <link rel="modulepreload" href="/assets/vendor.f537fa13.js">
-  <link rel="stylesheet" href="/assets/index.6f423984.css">
+  <link rel="stylesheet" href="/assets/index.311add64.css">
 <link rel="manifest" href="/manifest.webmanifest"></head>
 <body>
 
@@ -1522,31 +1522,19 @@ var __vite_components_10 = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["ssrRender
 ;
 var FAQ_vue_vue_type_style_index_0_scoped_true_lang = "";
 const _sfc_main$e = {
-  name: "GrayBgSimple",
-  mounted() {
-    this.registerClickEventListener();
-  },
   methods: {
-    registerClickEventListener() {
-      const faqs = document.getElementsByClassName("faq");
-      for (let i = 0; i < faqs.length; i++) {
-        faqs[i].addEventListener("click", (e) => {
-          e.stopPropagation();
-          console.log(e.currentTarget);
-          e.preventDefault();
-          const target = e.currentTarget;
-          const plusIcon = target.querySelector("[data-plus]");
-          const minusIcon = target.querySelector("[data-minus]");
-          const content = target.querySelector("[data-content]");
-          content.classList.toggle("hidden");
-          if (content.classList.contains("hidden")) {
-            plusIcon.style.display = "block";
-            minusIcon.style.display = "none";
-          } else {
-            plusIcon.style.display = "none";
-            minusIcon.style.display = "block";
-          }
-        }, true);
+    clickmenu(e) {
+      const target = e.currentTarget.parentNode.parentNode;
+      const plusIcon = target.querySelector("[data-plus]");
+      const minusIcon = target.querySelector("[data-minus]");
+      const content = target.querySelector("[data-content]");
+      content.classList.toggle("hidden");
+      if (content.classList.contains("hidden")) {
+        plusIcon.style.display = "block";
+        minusIcon.style.display = "none";
+      } else {
+        plusIcon.style.display = "none";
+        minusIcon.style.display = "block";
       }
     }
   }
@@ -1556,18 +1544,22 @@ function _sfc_ssrRender$6(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
   _push(ssrRenderComponent(_component_Gutter, mergeProps({ class: "" }, _attrs), {
     default: withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<div class="xl:pb-24 pb-12 sm:pt-0 pt-6" data-v-949e8f78${_scopeId}><div class="w-full" data-v-949e8f78${_scopeId}><ul data-v-949e8f78${_scopeId}><li class="faq py-6 border-gray-200 border-solid border-b" data-v-949e8f78${_scopeId}><div class="flex justify-between items-center cursor-pointer" data-v-949e8f78${_scopeId}><p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" data-v-949e8f78${_scopeId}> What is Renderpub? </p><div data-menu class="cursor-pointer" data-v-949e8f78${_scopeId}><svg xmlns="http://www.w3.org/2000/svg" data-plus class="hidden icon icon-tabler icon-tabler-circle-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Open" data-v-949e8f78${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-949e8f78${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-949e8f78${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-949e8f78${_scopeId}></line><line x1="12" y1="9" x2="12" y2="15" data-v-949e8f78${_scopeId}></line></svg><svg xmlns="http://www.w3.org/2000/svg" data-minus class="icon icon-tabler icon-tabler-circle-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Close" data-v-949e8f78${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-949e8f78${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-949e8f78${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-949e8f78${_scopeId}></line></svg></div></div><div data-content class="pt-2 md:pt-3 lg:pt-5 px-4 md:px-8 text-gray-200 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-949e8f78${_scopeId}> Renderpub is a software suite built for architectural visualization use cases. It consists of <ol class="px-4 md:px-8 text-gray-200 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-949e8f78${_scopeId}><li data-v-949e8f78${_scopeId}>Renderpub Studio - A real time, ray traced, rendering application to produce highly photorealistic images, videos and interactive VR experiences from 3D models.</li><li data-v-949e8f78${_scopeId}>Renderpub Spaces - A web platform to experience architectural spaces interactively and immersively in VR</li><li data-v-949e8f78${_scopeId}>Renderpub Stitch - An application to convert 3D models to interactive VR walkthroughs using pre rendered panoramic images.</li></ol></div></li><li class="faq py-6 border-gray-200 border-solid border-b" data-v-949e8f78${_scopeId}><div class="flex justify-between items-center cursor-pointer" data-v-949e8f78${_scopeId}><p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" data-v-949e8f78${_scopeId}> How do I get started? </p><div data-menu class="cursor-pointer" data-v-949e8f78${_scopeId}><svg data-plus xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Open" data-v-949e8f78${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-949e8f78${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-949e8f78${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-949e8f78${_scopeId}></line><line x1="12" y1="9" x2="12" y2="15" data-v-949e8f78${_scopeId}></line></svg><svg data-minus xmlns="http://www.w3.org/2000/svg" class="hidden icon icon-tabler icon-tabler-circle-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Close" data-v-949e8f78${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-949e8f78${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-949e8f78${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-949e8f78${_scopeId}></line></svg></div></div><p data-content class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-949e8f78${_scopeId}> The best way to get started with the Renderpub Suite is by downloading the launcher which will be made available at beta launch time. </p></li><li class="faq py-6 border-gray-200 border-solid border-b" data-v-949e8f78${_scopeId}><div class="flex justify-between items-center cursor-pointer" data-v-949e8f78${_scopeId}><p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" data-v-949e8f78${_scopeId}> How does Renderpub integrate with other software? </p><div data-menu class="cursor-pointer" data-v-949e8f78${_scopeId}><svg data-plus xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Open" data-v-949e8f78${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-949e8f78${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-949e8f78${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-949e8f78${_scopeId}></line><line x1="12" y1="9" x2="12" y2="15" data-v-949e8f78${_scopeId}></line></svg><svg data-minus xmlns="http://www.w3.org/2000/svg" class="hidden icon icon-tabler icon-tabler-circle-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Close" data-v-949e8f78${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-949e8f78${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-949e8f78${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-949e8f78${_scopeId}></line></svg></div></div><p data-content class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-949e8f78${_scopeId}> Renderpub Studio can import 3D models created in any 3D modeling software when exported to fbx, obj, dae, gltf, 3ds and 3dm formats. In addition to importing, there are DirectLink Plugins for real time syncing of scenes between Renderpub Studio and 3D modeling applications like SketchUp, Archicad, Rhino, Revit, and 3ds Max. </p></li><li class="faq py-6 border-gray-200 border-solid border-b" data-v-949e8f78${_scopeId}><div class="flex justify-between items-center cursor-pointer" data-v-949e8f78${_scopeId}><p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" data-v-949e8f78${_scopeId}> What is the pricing model? </p><div data-menu class="cursor-pointer" data-v-949e8f78${_scopeId}><svg data-plus xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Open" data-v-949e8f78${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-949e8f78${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-949e8f78${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-949e8f78${_scopeId}></line><line x1="12" y1="9" x2="12" y2="15" data-v-949e8f78${_scopeId}></line></svg><svg data-minus xmlns="http://www.w3.org/2000/svg" class="hidden icon icon-tabler icon-tabler-circle-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Close" data-v-949e8f78${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-949e8f78${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-949e8f78${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-949e8f78${_scopeId}></line></svg></div></div><p data-content class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-949e8f78${_scopeId}> All products in the Renderpub Suite are free for all purposes during the beta run. Definitive pricing will be made available before production release. </p></li><li class="faq py-6 border-gray-200 border-solid border-b" data-v-949e8f78${_scopeId}><div class="flex justify-between items-center cursor-pointer" data-v-949e8f78${_scopeId}><p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" data-v-949e8f78${_scopeId}> What are the minimum system requirements to run Renderpub Suite? </p><div data-menu class="cursor-pointer" data-v-949e8f78${_scopeId}><svg data-plus xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Open" data-v-949e8f78${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-949e8f78${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-949e8f78${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-949e8f78${_scopeId}></line><line x1="12" y1="9" x2="12" y2="15" data-v-949e8f78${_scopeId}></line></svg><svg data-minus xmlns="http://www.w3.org/2000/svg" class="hidden icon icon-tabler icon-tabler-circle-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Close" data-v-949e8f78${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-949e8f78${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-949e8f78${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-949e8f78${_scopeId}></line></svg></div></div><div data-content class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-949e8f78${_scopeId}><ul class="pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-949e8f78${_scopeId}><li data-v-949e8f78${_scopeId}>Renderpub Studio:<br data-v-949e8f78${_scopeId}><ol data-v-949e8f78${_scopeId}><li data-v-949e8f78${_scopeId}>OS: 64bit Windows10</li><li data-v-949e8f78${_scopeId}>GPU: GTX 1060 6GB or higher, DX12 and RTX compatible</li><li data-v-949e8f78${_scopeId}>Memory: 16GB RAM, 40GB Disk Space</li><li data-v-949e8f78${_scopeId}>CPU: Benchmark score &gt; 2000</li></ol></li><li class="pt-6" data-v-949e8f78${_scopeId}> Renderpub Spaces:<br data-v-949e8f78${_scopeId}> Any device that can run a modern web browser </li><li class="pt-6" data-v-949e8f78${_scopeId}>Renderpub Stitch:<br data-v-949e8f78${_scopeId}><ol data-v-949e8f78${_scopeId}><li data-v-949e8f78${_scopeId}>OS: Windows10 v1809 and higher with DirectX 12</li><li data-v-949e8f78${_scopeId}>GPU: DirectX 11 compatible</li><li data-v-949e8f78${_scopeId}>Memory: 8GB RAM, 2GB Disk Space</li><li data-v-949e8f78${_scopeId}>CPU: Benchmark score &gt; 2000</li></ol></li></ul></div></li><li class="faq py-6 border-gray-200 border-solid border-b" data-v-949e8f78${_scopeId}><div class="flex justify-between items-center cursor-pointer" data-v-949e8f78${_scopeId}><p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" data-v-949e8f78${_scopeId}> Do I need a Head Mounted Display (HMD) to use Renderpub? </p><div data-menu class="cursor-pointer" data-v-949e8f78${_scopeId}><svg data-plus xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Open" data-v-949e8f78${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-949e8f78${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-949e8f78${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-949e8f78${_scopeId}></line><line x1="12" y1="9" x2="12" y2="15" data-v-949e8f78${_scopeId}></line></svg><svg data-minus xmlns="http://www.w3.org/2000/svg" class="hidden icon icon-tabler icon-tabler-circle-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Close" data-v-949e8f78${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-949e8f78${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-949e8f78${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-949e8f78${_scopeId}></line></svg></div></div><p data-content class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-949e8f78${_scopeId}> While an HMD is not necessary, the interactive walkthroughs on Renderpub Spaces can be viewed immersively in VR using an HMD. </p></li><li class="faq py-6 border-gray-200 border-solid border-b" data-v-949e8f78${_scopeId}><div class="flex justify-between items-center cursor-pointer" data-v-949e8f78${_scopeId}><p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" data-v-949e8f78${_scopeId}> Where can I find support? </p><div data-menu class="cursor-pointer" data-v-949e8f78${_scopeId}><svg data-plus xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Open" data-v-949e8f78${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-949e8f78${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-949e8f78${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-949e8f78${_scopeId}></line><line x1="12" y1="9" x2="12" y2="15" data-v-949e8f78${_scopeId}></line></svg><svg data-minus xmlns="http://www.w3.org/2000/svg" class="hidden icon icon-tabler icon-tabler-circle-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Close" data-v-949e8f78${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-949e8f78${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-949e8f78${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-949e8f78${_scopeId}></line></svg></div></div><p data-content class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-949e8f78${_scopeId}> The best place to find community and support is the Renderpub <a id="discordlink" href="https://discord.gg/KtYtxfzs" target="_blank" style="${ssrRenderStyle({ "text-decoration": "underline" })}" data-v-949e8f78${_scopeId}>Discord Server.</a> Additionally, you can reach us at info@renderpub.com for correspondence. </p></li><li class="faq py-6 border-gray-200 border-solid border-b" data-v-949e8f78${_scopeId}><div class="flex justify-between items-center cursor-pointer" data-v-949e8f78${_scopeId}><p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" data-v-949e8f78${_scopeId}> Where can I find learning resources? </p><div data-menu class="cursor-pointer" data-v-949e8f78${_scopeId}><svg data-plus xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Open" data-v-949e8f78${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-949e8f78${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-949e8f78${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-949e8f78${_scopeId}></line><line x1="12" y1="9" x2="12" y2="15" data-v-949e8f78${_scopeId}></line></svg><svg data-minus xmlns="http://www.w3.org/2000/svg" class="hidden icon icon-tabler icon-tabler-circle-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Close" data-v-949e8f78${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-949e8f78${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-949e8f78${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-949e8f78${_scopeId}></line></svg></div></div><p data-content class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-949e8f78${_scopeId}> A video tutorial series will be posted on youtube that will help users get familiar with the tools. Documentation and in-app tutorials are also being worked on and will be made available during the beta phase. </p></li></ul></div></div>`);
+        _push2(`<div class="xl:pb-24 pb-12 sm:pt-0 pt-6" data-v-9009cc1a${_scopeId}><div class="w-full" data-v-9009cc1a${_scopeId}><ul data-v-9009cc1a${_scopeId}><li class="faq1 py-6 border-gray-200 border-solid border-b" data-v-9009cc1a${_scopeId}><div class="flex justify-between items-center cursor-pointer" data-v-9009cc1a${_scopeId}><p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" data-v-9009cc1a${_scopeId}> What is Renderpub? </p><div data-menu class="cursor-pointer" data-v-9009cc1a${_scopeId}><svg xmlns="http://www.w3.org/2000/svg" data-plus class="hidden icon icon-tabler icon-tabler-circle-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Open" data-v-9009cc1a${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-9009cc1a${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-9009cc1a${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-9009cc1a${_scopeId}></line><line x1="12" y1="9" x2="12" y2="15" data-v-9009cc1a${_scopeId}></line></svg><svg xmlns="http://www.w3.org/2000/svg" data-minus class="icon icon-tabler icon-tabler-circle-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Close" data-v-9009cc1a${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-9009cc1a${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-9009cc1a${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-9009cc1a${_scopeId}></line></svg></div></div><div data-content id="noclick" class="pt-2 md:pt-3 lg:pt-5 px-4 md:px-8 text-gray-200 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-9009cc1a${_scopeId}> Renderpub is a software suite built for architectural visualization use cases. It consists of <ol class="px-4 md:px-8 text-gray-200 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-9009cc1a${_scopeId}><li data-v-9009cc1a${_scopeId}>Renderpub Studio - A real time, ray traced, rendering application to produce highly photorealistic images, videos and interactive VR experiences from 3D models.</li><li data-v-9009cc1a${_scopeId}>Renderpub Spaces - A web platform to experience architectural spaces interactively and immersively in VR</li><li data-v-9009cc1a${_scopeId}>Renderpub Stitch - An application to convert 3D models to interactive VR walkthroughs using pre rendered panoramic images.</li></ol></div></li><li class="faq1 py-6 border-gray-200 border-solid border-b" data-v-9009cc1a${_scopeId}><div class="flex justify-between items-center cursor-pointer" data-v-9009cc1a${_scopeId}><p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" data-v-9009cc1a${_scopeId}> How do I get started? </p><div data-menu class="cursor-pointer" data-v-9009cc1a${_scopeId}><svg data-plus xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Open" data-v-9009cc1a${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-9009cc1a${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-9009cc1a${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-9009cc1a${_scopeId}></line><line x1="12" y1="9" x2="12" y2="15" data-v-9009cc1a${_scopeId}></line></svg><svg data-minus xmlns="http://www.w3.org/2000/svg" class="hidden icon icon-tabler icon-tabler-circle-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Close" data-v-9009cc1a${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-9009cc1a${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-9009cc1a${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-9009cc1a${_scopeId}></line></svg></div></div><p data-content id="noclick" class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-9009cc1a${_scopeId}> The best way to get started with the Renderpub Suite is by downloading the launcher which will be made available at beta launch time. </p></li><li class="faq1 py-6 border-gray-200 border-solid border-b" data-v-9009cc1a${_scopeId}><div class="flex justify-between items-center cursor-pointer" data-v-9009cc1a${_scopeId}><p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" data-v-9009cc1a${_scopeId}> How does Renderpub integrate with other software? </p><div data-menu class="cursor-pointer" data-v-9009cc1a${_scopeId}><svg data-plus xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Open" data-v-9009cc1a${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-9009cc1a${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-9009cc1a${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-9009cc1a${_scopeId}></line><line x1="12" y1="9" x2="12" y2="15" data-v-9009cc1a${_scopeId}></line></svg><svg data-minus xmlns="http://www.w3.org/2000/svg" class="hidden icon icon-tabler icon-tabler-circle-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Close" data-v-9009cc1a${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-9009cc1a${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-9009cc1a${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-9009cc1a${_scopeId}></line></svg></div></div><p data-content id="noclick" class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-9009cc1a${_scopeId}> Renderpub Studio can import 3D models created in any 3D modeling software when exported to fbx, obj, dae, gltf, 3ds and 3dm formats. In addition to importing, there are DirectLink Plugins for real time syncing of scenes between Renderpub Studio and 3D modeling applications like SketchUp, Archicad, Rhino, Revit, and 3ds Max. </p></li><li class="faq1 py-6 border-gray-200 border-solid border-b" data-v-9009cc1a${_scopeId}><div class="flex justify-between items-center cursor-pointer" data-v-9009cc1a${_scopeId}><p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" data-v-9009cc1a${_scopeId}> What is the pricing model? </p><div data-menu class="cursor-pointer" data-v-9009cc1a${_scopeId}><svg data-plus xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Open" data-v-9009cc1a${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-9009cc1a${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-9009cc1a${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-9009cc1a${_scopeId}></line><line x1="12" y1="9" x2="12" y2="15" data-v-9009cc1a${_scopeId}></line></svg><svg data-minus xmlns="http://www.w3.org/2000/svg" class="hidden icon icon-tabler icon-tabler-circle-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Close" data-v-9009cc1a${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-9009cc1a${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-9009cc1a${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-9009cc1a${_scopeId}></line></svg></div></div><p data-content id="noclick" class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-9009cc1a${_scopeId}> All products in the Renderpub Suite are free for all purposes during the beta run. Definitive pricing will be made available before production release. </p></li><li class="faq1 py-6 border-gray-200 border-solid border-b" data-v-9009cc1a${_scopeId}><div class="flex justify-between items-center cursor-pointer" data-v-9009cc1a${_scopeId}><p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" data-v-9009cc1a${_scopeId}> What are the minimum system requirements to run Renderpub Suite? </p><div data-menu class="cursor-pointer" data-v-9009cc1a${_scopeId}><svg data-plus xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Open" data-v-9009cc1a${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-9009cc1a${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-9009cc1a${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-9009cc1a${_scopeId}></line><line x1="12" y1="9" x2="12" y2="15" data-v-9009cc1a${_scopeId}></line></svg><svg data-minus xmlns="http://www.w3.org/2000/svg" class="hidden icon icon-tabler icon-tabler-circle-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Close" data-v-9009cc1a${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-9009cc1a${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-9009cc1a${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-9009cc1a${_scopeId}></line></svg></div></div><div data-content id="noclick" class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-9009cc1a${_scopeId}><ul class="pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-9009cc1a${_scopeId}><li data-v-9009cc1a${_scopeId}>Renderpub Studio:<br data-v-9009cc1a${_scopeId}><ol data-v-9009cc1a${_scopeId}><li data-v-9009cc1a${_scopeId}>OS: 64bit Windows10</li><li data-v-9009cc1a${_scopeId}>GPU: GTX 1060 6GB or higher, DX12 and RTX compatible</li><li data-v-9009cc1a${_scopeId}>Memory: 16GB RAM, 40GB Disk Space</li><li data-v-9009cc1a${_scopeId}>CPU: Benchmark score &gt; 2000</li></ol></li><li class="pt-6" data-v-9009cc1a${_scopeId}> Renderpub Spaces:<br data-v-9009cc1a${_scopeId}> Any device that can run a modern web browser </li><li class="pt-6" data-v-9009cc1a${_scopeId}>Renderpub Stitch:<br data-v-9009cc1a${_scopeId}><ol data-v-9009cc1a${_scopeId}><li data-v-9009cc1a${_scopeId}>OS: Windows10 v1809 and higher with DirectX 12</li><li data-v-9009cc1a${_scopeId}>GPU: DirectX 11 compatible</li><li data-v-9009cc1a${_scopeId}>Memory: 8GB RAM, 2GB Disk Space</li><li data-v-9009cc1a${_scopeId}>CPU: Benchmark score &gt; 2000</li></ol></li></ul></div></li><li class="faq1 py-6 border-gray-200 border-solid border-b" data-v-9009cc1a${_scopeId}><div class="flex justify-between items-center cursor-pointer" data-v-9009cc1a${_scopeId}><p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" data-v-9009cc1a${_scopeId}> Do I need a Head Mounted Display (HMD) to use Renderpub? </p><div data-menu class="cursor-pointer" data-v-9009cc1a${_scopeId}><svg data-plus xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Open" data-v-9009cc1a${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-9009cc1a${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-9009cc1a${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-9009cc1a${_scopeId}></line><line x1="12" y1="9" x2="12" y2="15" data-v-9009cc1a${_scopeId}></line></svg><svg data-minus xmlns="http://www.w3.org/2000/svg" class="hidden icon icon-tabler icon-tabler-circle-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Close" data-v-9009cc1a${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-9009cc1a${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-9009cc1a${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-9009cc1a${_scopeId}></line></svg></div></div><p data-content id="noclick" class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-9009cc1a${_scopeId}> While an HMD is not necessary, the interactive walkthroughs on Renderpub Spaces can be viewed immersively in VR using an HMD. </p></li><li class="faq1 py-6 border-gray-200 border-solid border-b" data-v-9009cc1a${_scopeId}><div class="flex justify-between items-center cursor-pointer" data-v-9009cc1a${_scopeId}><p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" data-v-9009cc1a${_scopeId}> Where can I find support? </p><div data-menu class="cursor-pointer" data-v-9009cc1a${_scopeId}><svg data-plus xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Open" data-v-9009cc1a${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-9009cc1a${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-9009cc1a${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-9009cc1a${_scopeId}></line><line x1="12" y1="9" x2="12" y2="15" data-v-9009cc1a${_scopeId}></line></svg><svg data-minus xmlns="http://www.w3.org/2000/svg" class="hidden icon icon-tabler icon-tabler-circle-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Close" data-v-9009cc1a${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-9009cc1a${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-9009cc1a${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-9009cc1a${_scopeId}></line></svg></div></div><p data-content id="noclick" class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-9009cc1a${_scopeId}> The best place to find community and support is the <a id="noclick" href="https://discord.gg/tj6ynHUM" target="_blank" style="${ssrRenderStyle({ "text-decoration": "underline" })}" data-v-9009cc1a${_scopeId}>Renderpub Discord Server.</a> Additionally, you can reach us at info@renderpub.com for correspondence. </p></li><li class="faq1 py-6 border-gray-200 border-solid border-b" data-v-9009cc1a${_scopeId}><div class="flex justify-between items-center cursor-pointer" data-v-9009cc1a${_scopeId}><p class="text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" data-v-9009cc1a${_scopeId}> Where can I find learning resources? </p><div data-menu class="cursor-pointer" data-v-9009cc1a${_scopeId}><svg data-plus xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Open" data-v-9009cc1a${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-9009cc1a${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-9009cc1a${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-9009cc1a${_scopeId}></line><line x1="12" y1="9" x2="12" y2="15" data-v-9009cc1a${_scopeId}></line></svg><svg data-minus xmlns="http://www.w3.org/2000/svg" class="hidden icon icon-tabler icon-tabler-circle-minus" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A0AEC0" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Close" data-v-9009cc1a${_scopeId}><path stroke="none" d="M0 0h24v24H0z" data-v-9009cc1a${_scopeId}></path><circle cx="12" cy="12" r="9" data-v-9009cc1a${_scopeId}></circle><line x1="9" y1="12" x2="15" y2="12" data-v-9009cc1a${_scopeId}></line></svg></div></div><p data-content id="noclick" class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" data-v-9009cc1a${_scopeId}> A video tutorial series will be posted on youtube that will help users get familiar with the tools. Documentation and in-app tutorials are also being worked on and will be made available during the beta phase. </p></li></ul></div></div>`);
       } else {
         return [
           createVNode("div", { class: "xl:pb-24 pb-12 sm:pt-0 pt-6" }, [
             createVNode("div", { class: "w-full" }, [
               createVNode("ul", null, [
-                createVNode("li", { class: "faq py-6 border-gray-200 border-solid border-b" }, [
+                createVNode("li", { class: "faq1 py-6 border-gray-200 border-solid border-b" }, [
                   createVNode("div", { class: "flex justify-between items-center cursor-pointer" }, [
-                    createVNode("p", { class: "text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" }, " What is Renderpub? "),
+                    createVNode("p", {
+                      class: "text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200",
+                      onClick: $options.clickmenu
+                    }, " What is Renderpub? ", 8, ["onClick"]),
                     createVNode("div", {
                       "data-menu": "",
-                      class: "cursor-pointer"
+                      class: "cursor-pointer",
+                      onClick: $options.clickmenu
                     }, [
                       (openBlock(), createBlock("svg", {
                         xmlns: "http://www.w3.org/2000/svg",
@@ -1635,10 +1627,11 @@ function _sfc_ssrRender$6(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
                           y2: "12"
                         })
                       ]))
-                    ])
+                    ], 8, ["onClick"])
                   ]),
                   createVNode("div", {
                     "data-content": "",
+                    id: "noclick",
                     class: "pt-2 md:pt-3 lg:pt-5 px-4 md:px-8 text-gray-200 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200"
                   }, [
                     createTextVNode(" Renderpub is a software suite built for architectural visualization use cases. It consists of "),
@@ -1649,12 +1642,16 @@ function _sfc_ssrRender$6(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
                     ])
                   ])
                 ]),
-                createVNode("li", { class: "faq py-6 border-gray-200 border-solid border-b" }, [
+                createVNode("li", { class: "faq1 py-6 border-gray-200 border-solid border-b" }, [
                   createVNode("div", { class: "flex justify-between items-center cursor-pointer" }, [
-                    createVNode("p", { class: "text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" }, " How do I get started? "),
+                    createVNode("p", {
+                      class: "text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200",
+                      onClick: $options.clickmenu
+                    }, " How do I get started? ", 8, ["onClick"]),
                     createVNode("div", {
                       "data-menu": "",
-                      class: "cursor-pointer"
+                      class: "cursor-pointer",
+                      onClick: $options.clickmenu
                     }, [
                       (openBlock(), createBlock("svg", {
                         "data-plus": "",
@@ -1722,19 +1719,24 @@ function _sfc_ssrRender$6(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
                           y2: "12"
                         })
                       ]))
-                    ])
+                    ], 8, ["onClick"])
                   ]),
                   createVNode("p", {
                     "data-content": "",
+                    id: "noclick",
                     class: "hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200"
                   }, " The best way to get started with the Renderpub Suite is by downloading the launcher which will be made available at beta launch time. ")
                 ]),
-                createVNode("li", { class: "faq py-6 border-gray-200 border-solid border-b" }, [
+                createVNode("li", { class: "faq1 py-6 border-gray-200 border-solid border-b" }, [
                   createVNode("div", { class: "flex justify-between items-center cursor-pointer" }, [
-                    createVNode("p", { class: "text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" }, " How does Renderpub integrate with other software? "),
+                    createVNode("p", {
+                      class: "text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200",
+                      onClick: $options.clickmenu
+                    }, " How does Renderpub integrate with other software? ", 8, ["onClick"]),
                     createVNode("div", {
                       "data-menu": "",
-                      class: "cursor-pointer"
+                      class: "cursor-pointer",
+                      onClick: $options.clickmenu
                     }, [
                       (openBlock(), createBlock("svg", {
                         "data-plus": "",
@@ -1802,19 +1804,24 @@ function _sfc_ssrRender$6(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
                           y2: "12"
                         })
                       ]))
-                    ])
+                    ], 8, ["onClick"])
                   ]),
                   createVNode("p", {
                     "data-content": "",
+                    id: "noclick",
                     class: "hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200"
                   }, " Renderpub Studio can import 3D models created in any 3D modeling software when exported to fbx, obj, dae, gltf, 3ds and 3dm formats. In addition to importing, there are DirectLink Plugins for real time syncing of scenes between Renderpub Studio and 3D modeling applications like SketchUp, Archicad, Rhino, Revit, and 3ds Max. ")
                 ]),
-                createVNode("li", { class: "faq py-6 border-gray-200 border-solid border-b" }, [
+                createVNode("li", { class: "faq1 py-6 border-gray-200 border-solid border-b" }, [
                   createVNode("div", { class: "flex justify-between items-center cursor-pointer" }, [
-                    createVNode("p", { class: "text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" }, " What is the pricing model? "),
+                    createVNode("p", {
+                      class: "text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200",
+                      onClick: $options.clickmenu
+                    }, " What is the pricing model? ", 8, ["onClick"]),
                     createVNode("div", {
                       "data-menu": "",
-                      class: "cursor-pointer"
+                      class: "cursor-pointer",
+                      onClick: $options.clickmenu
                     }, [
                       (openBlock(), createBlock("svg", {
                         "data-plus": "",
@@ -1882,19 +1889,24 @@ function _sfc_ssrRender$6(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
                           y2: "12"
                         })
                       ]))
-                    ])
+                    ], 8, ["onClick"])
                   ]),
                   createVNode("p", {
                     "data-content": "",
+                    id: "noclick",
                     class: "hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200"
                   }, " All products in the Renderpub Suite are free for all purposes during the beta run. Definitive pricing will be made available before production release. ")
                 ]),
-                createVNode("li", { class: "faq py-6 border-gray-200 border-solid border-b" }, [
+                createVNode("li", { class: "faq1 py-6 border-gray-200 border-solid border-b" }, [
                   createVNode("div", { class: "flex justify-between items-center cursor-pointer" }, [
-                    createVNode("p", { class: "text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" }, " What are the minimum system requirements to run Renderpub Suite? "),
+                    createVNode("p", {
+                      class: "text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200",
+                      onClick: $options.clickmenu
+                    }, " What are the minimum system requirements to run Renderpub Suite? ", 8, ["onClick"]),
                     createVNode("div", {
                       "data-menu": "",
-                      class: "cursor-pointer"
+                      class: "cursor-pointer",
+                      onClick: $options.clickmenu
                     }, [
                       (openBlock(), createBlock("svg", {
                         "data-plus": "",
@@ -1962,10 +1974,11 @@ function _sfc_ssrRender$6(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
                           y2: "12"
                         })
                       ]))
-                    ])
+                    ], 8, ["onClick"])
                   ]),
                   createVNode("div", {
                     "data-content": "",
+                    id: "noclick",
                     class: "hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200"
                   }, [
                     createVNode("ul", { class: "pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200" }, [
@@ -1997,12 +2010,16 @@ function _sfc_ssrRender$6(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
                     ])
                   ])
                 ]),
-                createVNode("li", { class: "faq py-6 border-gray-200 border-solid border-b" }, [
+                createVNode("li", { class: "faq1 py-6 border-gray-200 border-solid border-b" }, [
                   createVNode("div", { class: "flex justify-between items-center cursor-pointer" }, [
-                    createVNode("p", { class: "text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" }, " Do I need a Head Mounted Display (HMD) to use Renderpub? "),
+                    createVNode("p", {
+                      class: "text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200",
+                      onClick: $options.clickmenu
+                    }, " Do I need a Head Mounted Display (HMD) to use Renderpub? ", 8, ["onClick"]),
                     createVNode("div", {
                       "data-menu": "",
-                      class: "cursor-pointer"
+                      class: "cursor-pointer",
+                      onClick: $options.clickmenu
                     }, [
                       (openBlock(), createBlock("svg", {
                         "data-plus": "",
@@ -2070,19 +2087,24 @@ function _sfc_ssrRender$6(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
                           y2: "12"
                         })
                       ]))
-                    ])
+                    ], 8, ["onClick"])
                   ]),
                   createVNode("p", {
                     "data-content": "",
+                    id: "noclick",
                     class: "hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200"
                   }, " While an HMD is not necessary, the interactive walkthroughs on Renderpub Spaces can be viewed immersively in VR using an HMD. ")
                 ]),
-                createVNode("li", { class: "faq py-6 border-gray-200 border-solid border-b" }, [
+                createVNode("li", { class: "faq1 py-6 border-gray-200 border-solid border-b" }, [
                   createVNode("div", { class: "flex justify-between items-center cursor-pointer" }, [
-                    createVNode("p", { class: "text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" }, " Where can I find support? "),
+                    createVNode("p", {
+                      class: "text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200",
+                      onClick: $options.clickmenu
+                    }, " Where can I find support? ", 8, ["onClick"]),
                     createVNode("div", {
                       "data-menu": "",
-                      class: "cursor-pointer"
+                      class: "cursor-pointer",
+                      onClick: $options.clickmenu
                     }, [
                       (openBlock(), createBlock("svg", {
                         "data-plus": "",
@@ -2150,28 +2172,33 @@ function _sfc_ssrRender$6(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
                           y2: "12"
                         })
                       ]))
-                    ])
+                    ], 8, ["onClick"])
                   ]),
                   createVNode("p", {
                     "data-content": "",
+                    id: "noclick",
                     class: "hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200"
                   }, [
-                    createTextVNode(" The best place to find community and support is the Renderpub "),
+                    createTextVNode(" The best place to find community and support is the "),
                     createVNode("a", {
-                      id: "discordlink",
-                      href: "https://discord.gg/KtYtxfzs",
+                      id: "noclick",
+                      href: "https://discord.gg/tj6ynHUM",
                       target: "_blank",
                       style: { "text-decoration": "underline" }
-                    }, "Discord Server."),
+                    }, "Renderpub Discord Server."),
                     createTextVNode(" Additionally, you can reach us at info@renderpub.com for correspondence. ")
                   ])
                 ]),
-                createVNode("li", { class: "faq py-6 border-gray-200 border-solid border-b" }, [
+                createVNode("li", { class: "faq1 py-6 border-gray-200 border-solid border-b" }, [
                   createVNode("div", { class: "flex justify-between items-center cursor-pointer" }, [
-                    createVNode("p", { class: "text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200" }, " Where can I find learning resources? "),
+                    createVNode("p", {
+                      class: "text-gray-200 text-base md:text-xl xl:text-2xl w-10/12 dark:text-gray-200",
+                      onClick: $options.clickmenu
+                    }, " Where can I find learning resources? ", 8, ["onClick"]),
                     createVNode("div", {
                       "data-menu": "",
-                      class: "cursor-pointer"
+                      class: "cursor-pointer",
+                      onClick: $options.clickmenu
                     }, [
                       (openBlock(), createBlock("svg", {
                         "data-plus": "",
@@ -2239,10 +2266,11 @@ function _sfc_ssrRender$6(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
                           y2: "12"
                         })
                       ]))
-                    ])
+                    ], 8, ["onClick"])
                   ]),
                   createVNode("p", {
                     "data-content": "",
+                    id: "noclick",
                     class: "hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200"
                   }, " A video tutorial series will be posted on youtube that will help users get familiar with the tools. Documentation and in-app tutorials are also being worked on and will be made available during the beta phase. ")
                 ])
@@ -2261,7 +2289,7 @@ _sfc_main$e.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = new Set())).add("src/components/FAQ.vue");
   return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
 };
-var __vite_components_11 = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["ssrRender", _sfc_ssrRender$6], ["__scopeId", "data-v-949e8f78"]]);
+var __vite_components_11 = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["ssrRender", _sfc_ssrRender$6], ["__scopeId", "data-v-9009cc1a"]]);
 var block0$2 = {};
 const _sfc_main$d = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
