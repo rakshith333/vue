@@ -1,0 +1,10 @@
+[
+  {
+    "origin": ["https://spaces.renderpub.workers.dev","http://localhost:3333","http://localhost:3334","https://renderpub.com"],
+    "responseHeader": ["*"],
+    "method": ["*"],
+    "maxAgeSeconds": 3600
+  }
+]
+
+

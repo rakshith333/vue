@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-52JJBQP');</script>
+  <!-- End Google Tag Manager -->
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="icon" href="/LogoSolidCorrected.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/LogoSolidCorrected.svg">
+  <link rel="mask-icon" href="/LogoSolidCorrected.svg" color="#00aba9"> -->
+  <link id="fevitag" rel="icon" href="public/favicon.svg" type="image/svg+xml">
+  <link id="fevitag" rel="apple-touch-icon" href="public/favicon.svg">
+  <link id="fevitag" rel="mask-icon" href="public/favicon.svg" color="#00aba9">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- <script src = "https://cdn.jsdelivr.net/npm/three@0.136.0/build/three.min.js" > </script>
+  <script src = "https://cdn.jsdelivr.net/npm/three@0.136.0/examples/js/controls/OrbitControls.js">  </script>
+  <script src = "https://cdn.jsdelivr.net/npm/three@0.136.0/examples/js/loaders/DRACOLoader.js">  </script>
+  <script src = "https://cdn.jsdelivr.net/npm/three@0.136.0/examples/js/loaders/GLTFLoader.js">  </script> -->
+
+
+</head>
+<body>
+
+
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52JJBQP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+  <div id="app"></div>
+  <script>
+    (function() {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      // console.log(prefersDark);
+    //   const faviconTag = document.getElementById("fevitag");
+    //   const changeFavicon = () => {
+    //   if (prefersDark) {
+    //     // console.log("dark"); 
+    //     faviconTag.href = '/LogoSolidCorrectedDark.svg';
+    //   }
+    //   else {
+    //     // console.log("light"); 
+    //     faviconTag.href = '/LogoSolidCorrected.svg';
+    //   }
+    // };
+    // changeFavicon();
+      const setting = localStorage.getItem('color-schema') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+  </script>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

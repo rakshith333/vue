@@ -1,0 +1,30 @@
+{
+  "main": "main.js",
+  "type": "module",
+  "ssr": {
+    "assets": [
+      "Cursor_Hotspot_image",
+      "HeroVideo",
+      "NEWRENDERS",
+      "assets",
+      "favicon.ico",
+      "favicon.svg",
+      "icons",
+      "logos",
+      "manifest.webmanifest",
+      "registerSW.js",
+      "robots.txt",
+      "showcase",
+      "showcasepics",
+      "sw.js",
+      "sw.js.map",
+      "three",
+      "video",
+      "workbox-ac8ffed3.js",
+      "workbox-ac8ffed3.js.map"
+    ]
+  },
+  "vitedge": {
+    "commitHash": "4aoqncvwa5"
+  }
+}

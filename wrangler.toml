@@ -1,0 +1,27 @@
+name = "spaces-dev"
+type = "javascript"
+account_id = "4f6fbb81f0505de8951f37e75fd41197"
+workers_dev = true
+route = ""
+zone_id = "b04ecf24a34dd590772a2088d94deb85"
+compatibility_date = "2022-01-13"
+
+[site]
+bucket = "dist/client"
+entry-point = "."
+
+[build]
+command = ""
+watch_dir = "dist/worker"
+
+[build.upload]
+format = "service-worker"
+
+[env.production]
+name = "spaces"
+vars = { ENVIRONMENT = "production" }
+
+[env.staging]
+name = "spaces-staging"
+vars = { ENVIRONMENT = "staging" }
+
