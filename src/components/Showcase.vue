@@ -123,11 +123,11 @@
           @mouseleave="mouseleave($event)"
         />
       </div>
-      <div id="showcasepopup">
+      <div id="showcasepopup" class="">
         <!-- <div class="button cursor-pointer float-right pb-2" @click="closer()">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#FFFFFF" stroke-width="5" d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" /></svg>
         </div> -->
-        <img class="image object-contain" :src="image" alt="">
+        <img class="object-contain" :src="image" alt="">
       </div>
     </div>
   </Gutter>
@@ -243,6 +243,7 @@ export default ({
     },
     popover(event) {
       if (this.popup === false) {
+        document.getElementById('showcasepopup').childNodes[0].className = "image";
         document.getElementById('showcaseholder').style.opacity = '0.2'
         document.getElementById('showcasepopup').style.zIndex = '5'
         document.getElementById('showcasepopup').style.opacity = '1'
@@ -252,6 +253,7 @@ export default ({
         event.stopPropagation()
       }
       else {
+        document.getElementById('showcasepopup').childNodes[0].className = "image";
         document.getElementById('showcaseholder').style.opacity = '1'
         document.getElementById('showcasepopup').style.zIndex = '-1'
         document.getElementById('showcasepopup').style.opacity = '0'
