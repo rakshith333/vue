@@ -27,7 +27,7 @@ const props = defineProps({
   <TimelineUI />
 
 
-  <SectionHeading section-title="Product Suite" description="" class="pt-16 sm:-mt-0" />
+  <SectionHeading section-title="Product Suite" description="" class="pt-12 sm:-mt-0" />
   <Studio1 id="StudioSection" />
   <Stitch id="StitchSection" />
   <Spaces2 id="SpacesSection" />
