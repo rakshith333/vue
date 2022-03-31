@@ -26,8 +26,8 @@ const props = defineProps({
   <SectionHeading section-title="Workflow" description="" class="" />
   <TimelineUI />
 
-  
-  <SectionHeading section-title="Product Suite" description="" class="pt-32 -mt-20 sm:-mt-0" />
+
+  <SectionHeading section-title="Product Suite" description="" class="pt-16 sm:-mt-0" />
   <Studio1 id="StudioSection" />
   <Stitch id="StitchSection" />
   <Spaces2 id="SpacesSection" />

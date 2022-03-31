@@ -370,7 +370,7 @@
               </div>
             </div>
             <p data-content id="noclick" class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-200 px-4 md:px-8 text-sm md:text-base xl:text-lg rounded-b-lg dark:text-gray-200">
-              The best place to find community and support is the <a id="noclick" href="https://discord.gg/tj6ynHUM" target="_blank" style="text-decoration: underline;">Renderpub Discord Server.</a> Additionally, you can reach us at info@renderpub.com for correspondence.
+              The best place to find community and support is the <a id="noclick" href="https://discord.com/invite/ASXjnaWn2X" target="_blank" style="text-decoration: underline; color:#6ab8e6">Renderpub Discord Server.</a> Additionally, you can reach us at <a style="text-decoration: underline; color:#6ab8e6" href="mailto:info@renderpub.com?subject=Renderpub Enquiry">info@renderpub.com</a> for correspondence.
             </p>
           </li>
           <li class="faq1 py-6 border-gray-200 border-solid border-b">

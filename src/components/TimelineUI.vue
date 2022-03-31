@@ -22,7 +22,7 @@
             <p class="section-para">
               Bring in models from a wide range of supported 3d formats or
               instantly sync modeling changes from industry leading 3D modeling applications like
-              <b> <i> SketchUp, Revit, 3DS Max, Navisworks, Archicad and Rhino </i> </b>
+              <b> <i> SketchUp, Revit, 3DS Max, Navisworks, Archicad and Rhino. </i> </b>
             </p>
           </div>
         </div>
@@ -37,7 +37,7 @@
               Build your scene
             </p>
             <p class="section-para">
-              Easily create and populate scenes with the drag and drop library, mass placement and dynamic terrain editing tools
+              Easily create and populate scenes with the drag and drop library, mass placement and dynamic terrain editing tools.
             </p>
           </div>
         </div>
@@ -73,7 +73,7 @@
               Light it up
             </p>
             <p class="section-para">
-              Simulate natural lighting and weather conditions with HDRI lighting and dynamic sky and weathering systems
+              Simulate natural lighting and weather conditions with HDRI lighting and dynamic sky and weathering systems.
             </p>
           </div>
         </div>
@@ -89,7 +89,7 @@
             </p>
             <p class="section-para">
               Make any scene look realistic be applying physically based materials with photo scanned textures from the curated library or
-              create new materials by importing your own textures
+              create new materials by importing your own textures.
             </p>
           </div>
         </div>
@@ -125,10 +125,10 @@
               Export
             </p>
             <p class="section-para">
-              Render highly photorealistic images, image sequences and videos with support for 360-degree monoscopic and stereoscopic formats
+              Render highly photorealistic images, image sequences and videos with support for 360-degree monoscopic and stereoscopic formats.
             </p>
             <p class="section-para">
-              Publish interactive, embeddable, virtual reality walkthroughs that can be viewed on any device with a web browser
+              Publish interactive, embeddable, virtual reality walkthroughs that can be viewed on any device with a web browser.
             </p>
           </div>
         </div>
@@ -143,7 +143,7 @@
               Present in VR
             </p>
             <p class="section-para">
-              Present and showcase your designs as interactive VR walkthroughs on any device that can run a web browser
+              Present and showcase your designs as interactive VR walkthroughs on any device that can run a web browser.
             </p>
           </div>
         </div>
