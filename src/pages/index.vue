@@ -32,7 +32,7 @@ const props = defineProps({
   <Stitch id="StitchSection" />
   <Spaces2 id="SpacesSection" />
 
-   <SectionHeading section-title="Usecases" class="md:pt-32 pt-16" description="" />
+  <SectionHeading section-title="Usecases" class="md:pt-32 pt-16" description="" />
   <UseCases1 />
   <SectionHeading id="Showcase" section-title="Showcase" class="" description="" />
   <Showcase />
