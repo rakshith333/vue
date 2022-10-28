@@ -2,7 +2,7 @@
   <div class="xl:pb-24 pb-12 sm:pt-0 pt-8">
     <div class="w-full bg-fixed bg-cover xl:py-24 py-12 lazyload" style="background-image: URL(/NEWRENDERS/ASH_BATHROOM_3.jpeg);">
       <div class="container mx-auto">
-        <div data-aos="zoom-out" class="xl:w-3/5 lg:w-3/5 w-10/12 mx-auto p-8 bg-black bg-opacity-60">
+        <div id="subscribe2" data-aos="zoom-out" class="xl:w-3/5 lg:w-3/5 w-10/12 mx-auto p-8 bg-black bg-opacity-60 block">
           <h1 class="xl:text-5xl lg:text-5xl text-3xl text-shadow-xl text-center text-gray-200 pb-8">
             Sign Up for the <span class="font-bold">FREE BETA</span>
           </h1>
@@ -18,6 +18,11 @@
               Subscribe
             </button>
           </div>
+        </div>
+        <div id="thanks2" data-aos="zoom-out" class="hidden xl:w-3/5 lg:w-3/5 w-10/12 mx-auto px-8 pb-8 pt-2 bg-black bg-opacity-60 content-center place-content-center">
+          <h1 class="xl:text-3xl lg:text-3xl text-xl text-shadow-xl text-center text-gray-200">
+          <span class="font-bold">ThankYou</span> for subscribing!!
+          </h1>
         </div>
       </div>
     </div>
@@ -52,7 +57,8 @@ export default {
             //  this.$router.push('ThankYou');
             // document.getElementById('signup').style.display = 'none'
             // document.getElementById('thankyou').style.display = 'block'
-            alert("Thankyou for subscribing!!")
+            document.getElementById('thanks2').classList.replace('hidden','block')
+            // alert("Thankyou for subscribing!!")
             eml.ariaPlaceholder= "Thankyou!!"
             eml.value = ""
           } else {

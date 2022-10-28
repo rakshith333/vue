@@ -13,6 +13,10 @@ import Prism from 'markdown-it-prism'
 import vitedge from 'vitedge/plugin.js'
 
 export default defineConfig({
+  server:{
+    host: true,
+    https: true,
+  },
   resolve: {
     alias: {
       '~/': `${path.resolve(process.cwd(), 'src')}/`,

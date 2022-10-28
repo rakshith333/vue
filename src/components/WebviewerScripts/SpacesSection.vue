@@ -1,6 +1,6 @@
 <template>
   <!-- <Gutter class=""> -->
-    <div id="spacesdiv" class="bg-black bg-opacity-60 pt-24 xl:pt-48">
+    <div id="spacesdiv" class="pt-20 xl:pt-24">
     <div id="SpacesContainer" class="relative w-full h-full object-cover" style="">
       <div id="SpacesContent" class="text-gray-200 bg-black bg-opacity-60 h-full lg:w-1/3 sm:w-1/2 w-5/12 md:(py-18)">
         <div id="Spaces1" class="grid grid-cols-8 items-center absolute" style="display:block; margin-top:0">
@@ -257,7 +257,7 @@ export default {
           // console.log(SpacesContentLeftAligned);
           SpacesContentCenterAligned.style.display = 'block'
           // console.log(SpacesContentCenterAligned);
-          document.getElementById('SpacesContent').classList.add('w-full')
+          // document.getElementById('SpacesContent').classList.add('w-full')
         }
         else{
           camera.lookAt(new THREE.Vector3(1200, 0, 0))
@@ -265,9 +265,9 @@ export default {
           //  console.log(SpacesContentLeftAligned);
            SpacesContentCenterAligned.style.display = 'none'
           //  console.log(SpacesContentCenterAligned);
-          if (document.getElementById('SpacesContent').classList.contains('w-full')){
-            document.getElementById('SpacesContent').classList.remove('w-full')
-          }
+          // if (document.getElementById('SpacesContent').classList.contains('w-full')){
+          //   document.getElementById('SpacesContent').classList.remove('w-full')
+          // }
         }
           
         /* */

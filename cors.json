@@ -1,6 +1,6 @@
 [
   {
-    "origin": ["https://spaces.renderpub.workers.dev","http://localhost:3333","http://localhost:3334","https://renderpub.com"],
+    "origin": ["https://spaces.renderpub.workers.dev","http://localhost:3333","http://localhost:3334","https://renderpub.com","https://192.168.0.125:3333","https://localhost:3333"],
     "responseHeader": ["*"],
     "method": ["*"],
     "maxAgeSeconds": 3600

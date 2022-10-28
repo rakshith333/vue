@@ -1,8 +1,8 @@
 const dev = process.env.NODE_ENV != 'production'
 // export const server = 'https://webviewer.vercel.app/'
-export const server = dev ? 'http://localhost:3333/' : 'https://webviewer.vercel.app/'
-export const assetPath = dev ? 'http://localhost:3333/asset/' : 'https://webviewer.vercel.app/'
-export const cdnPath = dev ? 'https://spaces.renderpub.com/' : 'https://spaces.renderpub.com/'
+export const server = dev ? 'https://192.168.0.125:3333/' : 'https://webviewer.vercel.app/'
+export const assetPath = dev ? 'https://192.168.0.125:3333/asset/' : 'https://webviewer.vercel.app/'
+export const cdnPath = dev ? 'https://storage.googleapis.com/spaces.renderpub.com/' : 'https://storage.googleapis.com/spaces.renderpub.com/'
 
 export const defaults = {
   WIDTH: 1280,

@@ -1,6 +1,6 @@
 /* eslint-disable vars-on-top */
 import { library, icon } from '@fortawesome/fontawesome-svg-core'
-import { faInfoCircle, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faInfoCircle, faExternalLinkAlt, faToggleOff } from '@fortawesome/free-solid-svg-icons'
 import { defaults, assetPath, cdnPath, config } from './newConfig'
 // import { text } from '@fortawesome/fontawesome-svg-core'
 // import * as THREE from '../../../public/scripts/three/three.module.js'
@@ -26,6 +26,7 @@ export function Tags(THREE, container, renderer, scene, camera, tagsData, radius
   tagGroup.name = 'Tags'
 
   function createTextLabel() {
+    
     const card = document.createElement('div')
     card.className = 'text-label'
     card.style.position = 'absolute'
@@ -80,8 +81,9 @@ export function Tags(THREE, container, renderer, scene, camera, tagsData, radius
         card.addEventListener('touchstart', (e) => { touchFlag = 1 }, false)
         card.addEventListener('touchend', (e) => { touchFlag = 0 }, false)
 
-        card.addEventListener('mouseover', mOver_tags, false)
-        card.addEventListener('mouseout', mOut_tags, false)
+        // card.addEventListener('mouseover', mOver_tags, false)
+        // card.addEventListener('mouseout', mOut_tags, false)
+        card.addEventListener('click', clickToggle, false)
 
         const cardTitle = document.createElement('div')
         cardTitle.innerText = `${name}`
@@ -181,8 +183,17 @@ export function Tags(THREE, container, renderer, scene, camera, tagsData, radius
           iframeWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*')
         }
 
+        const toggle = function(cardContent) {
+          if (cardContent.style.display === "none") {
+            cardContent.style.display = "block";
+          } else {
+            cardContent.style.display = "none";
+          }
+        }
+
         const show = function(cardContent) {
           cardContent.style.display = 'block'
+          // console.log(cardContent.style.width);
           // console.log('displaying cardContent')
           scope.domElement.addEventListener('touchstart', ontouchstart, false)
         }
@@ -195,7 +206,13 @@ export function Tags(THREE, container, renderer, scene, camera, tagsData, radius
           // console.log('hiding cardContent')
         }
 
+        function clickToggle(e) {
+          e.stopPropagation()
+          toggle(cardContent);
+        }
+
         function mOver_tags() {
+          // console.log("over")
           if (touchFlag == 0) {
             // console.log('mouse over')
             window.mytimeout = setTimeout(() => {
@@ -209,7 +226,8 @@ export function Tags(THREE, container, renderer, scene, camera, tagsData, radius
           // aTag.style.textDecoration = 'underline'
         }
 
-        function mOut_tags() {
+        function mOut_tags(e) {
+          // console.log("out")
           // console.log('mouse out')
           hide(cardContent)
           clearTimeout(window.mytimeout)
@@ -237,10 +255,11 @@ export function Tags(THREE, container, renderer, scene, camera, tagsData, radius
 
         cardContent.appendChild(cardTitle)
         // cardContent.appendChild(aTag)
-        cardContent.appendChild(media)
+        // cardContent.appendChild(media)
         cardContent.appendChild(cardDescription)
 
         this.element.appendChild(iconContainer)
+        //console.log(this.element)
         this.element.appendChild(cardContent)
       },
       setParent(threejsobj) {
@@ -343,11 +362,13 @@ export function Tags(THREE, container, renderer, scene, camera, tagsData, radius
 
   function main() {
     for (let i = 0; i < tagsData.length; i++) {
+      
       const tag = createTag(tagsData[i].name, tagsData[i].location, tagsData[i].height, tagsData[i].color, tagsData[i].medialink, tagsData[i].description, tagsData[i].mediatype)
       tagGroup.add(tag)
     }
 
     scene.add(tagGroup)
+    // console.log(scene)
   }
 
   scope.domElement.addEventListener('mousemove', onDocumentMouseMove, !1)
@@ -366,10 +387,38 @@ export function Tags(THREE, container, renderer, scene, camera, tagsData, radius
         raycaster.camera = camera
         raycaster.set(camera.position, tempPos)
         const intersects = raycaster.intersectObjects(scene.children, true)
-        if (intersects[0].object.parent.name == child.name)
+        // console.log("---------------------")
+        // console.log(intersects)
+        // console.log(intersects[0].object.parent.name)
+        // console.log(child.name)
+        // console.log(child.name + " position = "+ child.position.x+","+child.position.y+","+child.position.z)
+        // console.log(child.name + " circle position = "+ child.circle.position.x+","+child.circle.position.y+","+child.circle.position.z)
+        
+        if (intersects[0].object.parent.name == child.name){
           child.textVisible = true
-        else
+          // console.log("visible")
+        }
+        else{
+          if ( (intersects.length > 1) && (intersects[1].object.parent.name == child.name)) {
+              //hack: need better way to resolve floating point precision errors
+              // console.log("distance = " + intersects[1].point.distanceTo(intersects[0].point))
+              if ((intersects[1].point.distanceTo(intersects[0].point) < 12)){
+                // console.log("visible")
+                child.textVisible = true
+              }
+              else{
+                // console.log("invisible")
+                child.textVisible = false
+              }
+          }
+          else{
+            // console.log("invisible")
           child.textVisible = false
+          }
+          
+        }
+        // console.log("---------------------\n\n")
+          
       }
     })
   }

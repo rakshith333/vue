@@ -25,3 +25,6 @@ vars = { ENVIRONMENT = "production" }
 name = "spaces-staging"
 vars = { ENVIRONMENT = "staging" }
 
+[[r2_buckets]]
+binding = 'MY_BUCKET'
+bucket_name = 'renderpub-spaces-v100'

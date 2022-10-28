@@ -27,12 +27,12 @@ const props = defineProps({
   <TimelineUI />
 
 
-  <SectionHeading section-title="Product Suite" description="" class="pt-12 sm:-mt-0" />
+  <SectionHeading section-title="Product Suite" description="" class="pt-16 sm:pt-12 lg:pt-8 sm:-mt-0" />
   <Studio1 id="StudioSection" />
   <Stitch id="StitchSection" />
   <Spaces2 id="SpacesSection" />
 
-  <SectionHeading section-title="Usecases" class="md:pt-32 pt-16" description="" />
+  <SectionHeading section-title="Usecases" class="lg:pt-32 pt-16" description="" />
   <UseCases1 />
   <SectionHeading id="Showcase" section-title="Showcase" class="" description="" />
   <Showcase />
@@ -47,7 +47,6 @@ const props = defineProps({
 </template>
 
 <route lang="yaml">
-name: home
 meta:
   layout: home
 </route>

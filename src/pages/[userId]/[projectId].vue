@@ -21,13 +21,13 @@ const { t } = useI18n()
 <template>
 <Gutter>
   <div class="">
-    <p class="text-white my-20">
+    <!-- <p class="text-white my-20">
       Hello there,  {{ props.userId }} and ur project is {{ props.projectId}}.
-    </p>
-    <div id="test1" class="content-center mt-10 aspect-video">
+    </p> -->
+    <div id="test1" class="content-center my-20 aspect-video">
         <ClientOnly id="test1">
             <!-- <Webviewer user-id=user1 project-id=project1 start-scene="0" start-hotspot="h0"/> -->
-            <Webviewer v-bind="{ 'user-id':props.userId, 'project-id': props.projectId, 'start-scene':'0', 'start-hotspot':'0'  }"/>
+            <Webviewer v-bind="{ 'user-id':props.userId, 'project-id': props.projectId, 'start-scene':'0', 'start-hotspot':'Hotspot0'  }"/>
             
         </ClientOnly>
     </div>

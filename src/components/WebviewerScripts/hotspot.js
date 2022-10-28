@@ -21,6 +21,7 @@ export function Hotspots(THREE, scene, locations) {
   material.alphaMap.minFilter = THREE.LinearFilter
 
   for (const positionName in locations) {
+    // console.log(positionName)
     const pos = locations[positionName].position
     raycaster.set(pos, new THREE.Vector3(0, -1, 0))
     const intersects = raycaster.intersectObject(group, false)

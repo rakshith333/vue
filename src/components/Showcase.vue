@@ -1,6 +1,6 @@
 <template>
   <Gutter class=""  @click="closer()">
-    <div id="inlargeScreen" class="xl:pb-24 pb-12 relative">
+    <div id="inlargeScreen" class="xl:pb-24 pb-12 relative pt-8">
       <div id="showcaseholder" class="showcasecontainer grid grid-rows-4 grid-flow-col justify-around border-black" style="z-index:0">
         <img
           data-aos="fade-up"
@@ -272,6 +272,7 @@ export default ({
       this.popup = false
     },
     popovermobile(event) {
+      
       const eles = document.getElementsByClassName('pic')
       for (const e of eles)
 
@@ -283,7 +284,6 @@ export default ({
     changeOp() {
       const eles = document.getElementsByClassName('pic')
       for (const e of eles)
-
         e.style.opacity = 1
     },
   }

@@ -70,6 +70,11 @@
             
           </li>
           </a>
+          <!-- <li class="hover:text-our-blue cursor-pointer h-full flex items-center text-gray-200 mr-10 tracking-normal">
+              <router-link to="/careers" @click="scrollToTop">
+              Careers
+              </router-link>
+            </li> -->
             <!-- <li class="hover:text-our-blue cursor-pointer h-full flex items-center text-gray-200 mr-10 tracking-normal"> -->
               <!-- <router-link to="/NFT" @click="scrollToTop"> -->
               <!-- NFT -->

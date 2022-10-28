@@ -184,14 +184,29 @@ export default {
       function getData() {
         // console.log(userid, ' ', projectid)
         // sceneConfig.db = `${cdnPath}spacesDemo/user1/project1/payload.json`
-        sceneConfig.db = `${cdnPath}spacesDemo/${userid}/${projectid}/Data/payload.json`
-        // console.log(sceneConfig.db)
-        const jsonData = Utils.getFileData(sceneConfig.db).then(data => data.json())
-        // console.log(jsonData)
-        jsonData.then(data => dataParse(data))
+        sceneConfig.db = `${cdnPath}${userid}/${projectid}/Data/payload.json`
+        
+        const jsonData = Utils.getFileData(sceneConfig.db).then(data => {
+          console.log("here-1")
+          try{
+            return data.json()
+          }
+          catch(error1){
+            console.log('Error happened here!')
+            console.error(error1)
+          }
+
+          
+          })
+        console.log("Successfully read JSON at Path = " + sceneConfig.db)
+        jsonData.then(data => {
+          console.log(data)
+          return dataParse(data)
+          })
       }
 
       function dataParse(data) {
+        console.log("parsing JSON")
         if (startScene)
           currentScene = startScene
         else
@@ -242,7 +257,8 @@ export default {
         sceneConfig.size = data.scenes[currentScene].size
         init()
         loadSceneGLTF(currentScene, currenthotspot)
-        loadTags(currentScene)
+        //console.log("here2")
+        //loadTags(currentScene)
         requestRenderIfNotRequested()
       }
       getData()
@@ -280,8 +296,8 @@ export default {
       function IsAdjacent(h1, h2) {
         const origin = h1.position
         const dest = new THREE.Vector3().subVectors(h2.position, new THREE.Vector3(0.0, 113.4, 0.0))
-        console.log(origin)
-        console.log(dest)
+        // console.log(origin)
+        // console.log(dest)
 
         const geometry = new THREE.SphereGeometry(15, 32, 16)
         const material1 = new THREE.MeshBasicMaterial({ color: 0xFF0000 })
@@ -299,11 +315,11 @@ export default {
         raycaster.set(origin, normal)
         const intersects = raycaster.intersectObjects(locations, true)
         if (intersects.length > 0) {
-          console.log(intersects[0].object.name)
+          // console.log(intersects[0].object.name)
           return (intersects[0].object == h2)
         }
         else {
-          console.log('no hits')
+          // console.log('no hits')
           return false }
       }
 
@@ -344,7 +360,7 @@ export default {
 
           if ((nextPosition != currentPosition)) {
             const adjacent = IsAdjacent(currentPosition, nextPosition)
-            console.log(adjacent)
+            // console.log(adjacent)
             streamCubeMap(nextPosition.name)
           }
         }
@@ -352,7 +368,7 @@ export default {
       }
 
       function onDocumentMouseDown(e) {
-        console.log(e)
+        // console.log(e)
         mouseDownPos.x = e.offsetX
         mouseDownPos.y = e.offsetY
         // console.log(mouseDownPos)
@@ -427,7 +443,10 @@ export default {
         if (clicked == 1)
           TWEEN.update()
         cursor.update()
-        tags.update()
+        if (tags !== undefined){
+          tags.update()
+        }
+        
         controls.update()
         effect.render(scene, camera)
       }
@@ -668,9 +687,9 @@ export default {
         renderer.domElement.addEventListener('mouseup', onDocumentMouseUp, !1)
         renderer.domElement.addEventListener('mousedown', (e) => { onDocumentMouseDown(e) }, !1)
         renderer.domElement.addEventListener('mousemove', (e) => { onDocumentMouseMove(e) })
-        renderer.domElement.addEventListener('touchstart', onDocumentTouchStart, !1)
-        renderer.domElement.addEventListener('touchend', onDocumentTouchEnd, !1)
-        renderer.domElement.addEventListener('touchmove', onDocumentTouchMove, !1)
+        // renderer.domElement.addEventListener('touchstart', onDocumentTouchStart, !1)
+        // renderer.domElement.addEventListener('touchend', onDocumentTouchEnd, !1)
+        // renderer.domElement.addEventListener('touchmove', onDocumentTouchMove, !1)
       }
 
       function onTransitionEnd(event) {
@@ -678,6 +697,7 @@ export default {
       }
 
       function loadTags(sceneNo = 0) {
+        // console.log("asd")
         const tagsData = sceneConfig.data.scenes[sceneNo].tags
         const tempTags = []
         for (let i = 0; i < tagsData.length; i++) {
@@ -721,7 +741,7 @@ export default {
         // toEncode()
         // const test2 = toEncode(uri_glb)
         // sceneConfig.mdl = `${cdnPath}spacesDemo/user1/project1/model/output.glb`
-        sceneConfig.mdl = `${cdnPath}spacesDemo/${userid}/${projectid}/Data/WorldMesh.glb`
+        sceneConfig.mdl = `${cdnPath}${userid}/${projectid}/Data/WorldMesh.glb`
         // console.log(sceneConfig.mdl)
         // console.log('starting to load')
 
@@ -778,7 +798,9 @@ export default {
               }
             })
             // console.log(object.scene.children[0])
-            object.scene.children[0].traverse((child) => {
+            // object.scene.children[0].children[0].traverse((child) => {
+              object.scene.children[0].traverse((child) => {
+            // object.scene.children[0].children[0].children[0].traverse((child) => {
               child.originalMaterial = child.material
               if (Array.isArray(child.originalMaterial)) {
                 child.originalMaterial.forEach((material) => {
@@ -793,9 +815,10 @@ export default {
                 child.originalMaterial.emissive = new THREE.Color(1, 1, 1)
                 child.originalMaterial.emissiveIntensity = 0.2
               }
-              child.shaderMaterial = shaderMaterial
-              child.material = child.shaderMaterial
+               child.shaderMaterial = shaderMaterial
+               child.material = child.shaderMaterial
               child.renderOrder = 2
+              // console.log(child)
               child.geometry.computeBoundsTree()
               // console.log(child.geometry)
               cursor.addTargetObject(child)
@@ -826,6 +849,7 @@ export default {
                   cubeMap1.minFilter = THREE.LinearFilter
                   loadedExpectedResources++
                   initHotspots()
+                  // console.log("here1")
                   loadTags(currentScene)
                   requestRenderIfNotRequested()
                   alreadyInit = !0
@@ -848,7 +872,7 @@ export default {
 
       function initCubeMaps(callback, callback2) {
         currentPosition = locations[startPosition]
-        // console.log(location)
+        // console.log(locations)
         camera.rotation.copy(currentPosition.rotation)
         setCameraPos(currentPosition.position)
         const urls = getCubemapUrls(currentPosition.name)
@@ -868,13 +892,13 @@ export default {
         const format = 'webp'
         // if(pos == 0) format = 'webp'
 
-        for (let i = 1; i <= 16; i = i + 3) {
+        for (let i = 0; i <= 15; i = i + 3) {
           var tempPath
           if (i < 10)
-            tempPath = `${cdnPath}spacesDemo/${userid}/${projectid}/Walk0/Hotspot${pos}/000${i}.${format}`
+            tempPath = `${cdnPath}${userid}/${projectid}/Walk0/${pos}/000${i}.${format}`
           // console.log(tempPath)
           else
-            tempPath = `${cdnPath}spacesDemo/${userid}/${projectid}/Walk0/Hotspot${pos}/00${i}.${format}`
+            tempPath = `${cdnPath}${userid}/${projectid}/Walk0/${pos}/00${i}.${format}`
 
           out.push(tempPath)
         }

@@ -2,7 +2,7 @@
 <Gutter>
     <section class="max-w-8xl mx-auto container">
         <div>
-            <div class="mt-4 md:mt-8 lg:mt-16 flex flex-wrap justify-between px-4">
+            <div class="my-8 md:my-8 lg:my-16 flex flex-wrap justify-between px-4">
                 <div class="flex sm:w-full md:w-5/12 pb-10 md:pb-20">
                     <div class="w-20 h-20 relative mr-5">
                         <div class="absolute top-0 right-0 bg-[#e8ffff] rounded w-16 h-16 mt-2 mr-1"></div>
